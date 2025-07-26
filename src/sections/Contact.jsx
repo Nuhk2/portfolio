@@ -47,7 +47,7 @@ const Contact = () => {
           sub="💬 Have questions or ideas? Let’s talk! 🚀"
         />
         <div className="grid-12-cols mt-16">
-          <div className="xl:col-span-5">
+          <div className="xl:col-span-6">
             <div className="flex-center card-border rounded-xl p-10">
               <form
                 ref={formRef}
@@ -107,12 +107,24 @@ const Contact = () => {
               </form>
             </div>
           </div>
-          <div className="xl:col-span-7 min-h-96">
+          {/* Uncomment the following div to use the 3D model instead of the self portrait image */}
+
+          {/* <div className="xl:col-span-7 min-h-96">
             <div className="bg-[#cd7c2e] w-full h-full hover:cursor-grab rounded-3xl overflow-hidden">
               <ContactExperience />
             </div>
-          </div>
+          </div> */}
+          <div className="xl:col-span-6 min-h-9" style={{ minWidth: "450px" }}>
+  <div className="flex justify-center items-center">
+    <img
+      src="/images/selfportrait (1).png"
+      alt="Self portrait"
+      className="w-[353px] h-[580px] object-cover rounded-xl shadow-lg"
+    />
+  </div>
         </div>
+        
+</div>
       </div>
     </section>
   );
