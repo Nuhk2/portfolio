@@ -1,11 +1,14 @@
 import { socialImgs } from "../constants";
-
+import "@fortawesome/fontawesome-free/css/all.min.css";
 const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer-container">
         <div className="flex flex-col justify-center">
-          <p>Terms & Conditions</p>
+          
+          <p>
+            <i className="fa-solid fa-location-dot text-red-400">  </i> 
+          Rawalpindi, Pakistan</p>
         </div>
         <div className="socials">
           {socialImgs.map((socialImg, index,) => (
