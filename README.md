@@ -11,10 +11,11 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/3D-Three.js-blue?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/Animation-GSAP-green?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/Styling-TailwindCSS-orange?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/3D-Three.js-blue?style=for-the-badge" alt="Three.js Badge" />
+  <img src="https://img.shields.io/badge/Animation-GSAP-green?style=for-the-badge" alt="GSAP Badge" />
+  <img src="https://img.shields.io/badge/Styling-TailwindCSS-orange?style=for-the-badge" alt="Tailwind CSS Badge" />
 </p>
+
 
 ---
 
