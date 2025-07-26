@@ -110,8 +110,8 @@ const techStackImgs = [
     imgPath: "/images/logos/three.png",
   },
   {
-    name: "Project Manager",
-    imgPath: "/images/logos/git.svg",
+    name: "UI/UX Design",
+    imgPath: "/images/logos/figma.png",
   },
 ];
 
@@ -252,13 +252,11 @@ const socialImgs = [
     imgPath: "/images/insta.png",
     link: "https://www.instagram.com/nuhk2.0/",
   },
+ 
   {
-    name: "fb",
-    imgPath: "/images/fb.png",
-  },
-  {
-    name: "x",
-    imgPath: "/images/x.png",
+    name: "github",
+    imgPath: "/images/github.png",
+    link: "https://github.com/Nuhk2",
   },
   {
     name: "linkedin",

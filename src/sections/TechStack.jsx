@@ -60,7 +60,7 @@ const TechStack = () => {
                 <div className="tech-icon-wrapper">
                   <img src={techStackIcon.imgPath} alt="" />
                 </div>
-                <div className="padding-x w-full">
+                <div className="padding-x padding-y-lg pb-6 w-full">
                   <p>{techStackIcon.name}</p>
                 </div>
               </div>
