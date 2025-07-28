@@ -12,47 +12,47 @@ gsap.registerPlugin(ScrollTrigger);
 
 const projects = [
   {
-    title: "On-Demand Rides Made Simple with Ryde",
+    title: "Smart Entry Test Proctor - FYP",
     img: "/images/project1.png",
     bg: "",
     short:
-      "React Native + Expo + TailwindCSS for a fast and clean user experience.",
+      "An online platform for monitoring and conducting entry tests securely.",
     detailed:
-      "Ryde makes urban transport seamless with real-time tracking, easy payments, and a sleek UI. Developed with cross-platform compatibility for iOS and Android.",
-    git: "https://github.com/ryde-app",
-    live: "https://ryde-app.com",
-  },
-   {
-  title: "ANOTHER Project",
-    img: "/images/project1.png",
-    bg: "",
-    short:
-      "React Native + Expo + TailwindCSS for a fast and clean user experience.",
-    detailed:
-      "Ryde makes urban transport seamless with real-time tracking, easy payments, and a sleek UI. Developed with cross-platform compatibility for iOS and Android.",
-    git: "https://github.com/ryde-app",
-    live: "https://ryde-app.com",
+      "Smart Entry Test Proctor ensures fair and cheat-proof examinations with real-time monitoring, analytics, and AI-based proctoring tools.",
+    git: "https://github.com/yourusername/smart-proctor", 
   },
   {
-    title: "The Library Management Platform",
+    title: "Guitar - Circle of Fifths",
     img: "/images/project2.png",
     bg: "bg-[#FFEFDB]",
     short:
-      "A smart platform to manage books, borrowing and library operations.",
+      "An interactive app to explore music theory and practice chord progressions.",
     detailed:
-      "This system digitalizes traditional libraries, helping librarians manage resources and members efficiently. Includes dashboards, analytics, and notifications.",
-    git: "https://github.com/library-platform",
-    live: "https://library-platform.com",
+      "Circle of Fifths Guitar helps musicians visualize scales and chords. Built with React and modern UI for smooth practice sessions.",
+    git: "https://github.com/yourusername/circle-of-fifths", // replace with real link
+    live: "https://circleoffifths.com", // replace with real link
   },
   {
-    title: "YC Directory - A Startup Showcase App",
+    title: "Quetta Tea Cafe",
     img: "/images/project3.png",
     bg: "bg-[#FFE7EB]",
-    short: "Browse startups easily with a clean and intuitive UI.",
+    short:
+      "A cozy café brand website showcasing menu, gallery, and reservations.",
     detailed:
-      "YC Directory curates top startups with details, funding info, and categories. Built with modern tech and designed for speed and simplicity.",
-    git: "https://github.com/yc-directory",
-    live: "https://yc-directory.com",
+      "Quetta Tea Cafe's website highlights a warm ambiance, online ordering, and reservations with a smooth browsing experience.",
+    git: "https://github.com/yourusername/quetta-tea-cafe", // replace with real link
+    live: "https://quettateacafe.com", // replace with real link
+  },
+  {
+    title: "Random Project Showcase",
+    img: "/images/project1.png",
+    bg: "",
+    short:
+      "An experimental project demonstrating creativity and problem-solving.",
+    detailed:
+      "This random showcase project was built to explore innovative ideas and experiment with UI/UX and development patterns.",
+    git: "https://github.com/yourusername/random-project", // replace with real link
+    live: "https://randomproject.com", // replace with real link
   },
 ];
 
@@ -135,24 +135,55 @@ const AppShowcase = () => {
     ],
   };
 
-  const ButtonGroup = ({ gitLink, liveLink }) => (
-    <div className="button-group mt-4 flex justify-center gap-4">
-      <a href={gitLink} target="_blank" rel="noopener noreferrer"
-         className="px-5 py-2 rounded-xl bg-gray-800 text-gray-200 font-small 
+  const ButtonGroup = ({ gitLink, liveLink }) => {
+  const buttons = [];
+
+  if (gitLink && gitLink.trim() !== "") {
+    buttons.push(
+      <a
+        key="git"
+        href={gitLink}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="px-5 py-2 rounded-xl bg-gray-800 text-gray-200 font-small 
               transition-all duration-500 
              hover:text-black  
-             hover:bg-white ">
+             hover:bg-white "
+      >
         Git
       </a>
-      <a href={liveLink} target="_blank" rel="noopener noreferrer"
-         className="px-5 py-2 rounded-xl bg-gray-800 text-gray-200 font-small 
+    );
+  }
+
+  if (liveLink && liveLink.trim() !== "") {
+    buttons.push(
+      <a
+        key="live"
+        href={liveLink}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="px-5 py-2 rounded-xl bg-gray-800 text-gray-200 font-small 
               transition-all duration-500 
              hover:text-black  
-             hover:bg-white ">
+             hover:bg-white "
+      >
         View Live
       </a>
+    );
+  }
+
+  if (buttons.length === 0) {
+    return null;
+  }
+
+  return (
+    <div className="button-group mt-4 flex justify-center gap-4">
+      {buttons}
     </div>
   );
+};
+
+ 
 
   return (
     <div id="work" ref={sectionRef} className="app-showcase pt-12 pb-1 ">
