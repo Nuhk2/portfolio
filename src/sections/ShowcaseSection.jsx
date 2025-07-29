@@ -3,7 +3,8 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 import Slider from "react-slick";
-import Button from "../components/Button";
+import TitleHeader from "../components/TitleHeader";
+
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -18,8 +19,8 @@ const projects = [
     short:
       "An online platform for monitoring and conducting entry tests securely.",
     detailed:
-      "Smart Entry Test Proctor ensures fair and cheat-proof examinations with real-time monitoring, analytics, and AI-based proctoring tools.",
-    git: "https://github.com/yourusername/smart-proctor", 
+      "Smart Entry Test Proctor is an AI-based system designed to detect and prevent cheating during university entry tests. It ensures secure, fair exams while also handling online registration, admit card generation, digital testing, and instant result calculation making the entire process smooth and efficient.",
+    git: "https://github.com/Nuhk2/Smart-Entry-Test-Proctor", 
   },
   {
     title: "Guitar - Circle of Fifths",
@@ -29,8 +30,8 @@ const projects = [
       "An interactive app to explore music theory and practice chord progressions.",
     detailed:
       "Circle of Fifths Guitar helps musicians visualize scales and chords. Built with React and modern UI for smooth practice sessions.",
-    git: "https://github.com/yourusername/circle-of-fifths", // replace with real link
-    live: "https://circleoffifths.com", // replace with real link
+    git: "https://github.com/Nuhk2/Guitar.circle-of-fifths", // replace with real link
+    live: "https://guitar-circle-of-fifths.vercel.app/", // replace with real link
   },
   {
     title: "Quetta Tea Cafe",
@@ -88,8 +89,31 @@ const AppShowcase = () => {
   const [animatingSlide, setAnimatingSlide] = useState(null);
 
   useGSAP(() => {
-    gsap.fromTo(sectionRef.current, { opacity: 0 }, { opacity: 1, duration: 1.5 });
-  }, []);
+  const el = sectionRef.current;
+
+  gsap.fromTo(
+    el,
+    {
+      opacity: 0,
+      y: -100, // start above
+    },
+    {
+      opacity: 1,
+      y: 0,
+      duration: 1.2,
+      ease: "power3.out",
+      scrollTrigger: {
+        trigger: el,
+        start: "top 65%",  // when section enters view
+        toggleActions: "play reverse play reverse", 
+        // onEnter, onLeave, onEnterBack, onLeaveBack
+      },
+    }
+  );
+}, []);
+
+
+
 
   const settings = {
     dots: true,
@@ -188,15 +212,20 @@ const AppShowcase = () => {
   return (
     <div id="work" ref={sectionRef} className="app-showcase pt-12 pb-1 ">
       <div className="w-full max-w-7xl mx-auto px-4">
-        <h1 className="text-3xl font-bold text-white mb-8 text-center">Our Projects</h1>
 
+<div className="w-full h-full md:px-20 px-5">
+        <TitleHeader
+          title="Our Projects"
+          sub="💼 A showcase of my work"
+        /></div>
+        
         <Slider {...settings} className="showcaselayout">
           {projects.map((proj, index) => {
   const isFading = animatingSlide === index;
   return (
     <div key={index} className="px-4 pt-4 pb-16">
       <div className={`image-wrapper rounded-lg overflow-hidden h-72 ${proj.bg}`}>
-        <img src={proj.img} alt={proj.title} className="w-full h-full object-cover" />
+        <img src={proj.img} alt={proj.title} className="w-full h-full object-contain" />
       </div>
       <div
         className={`text-content mt-4 text-center transition-opacity duration-500 ${
@@ -213,8 +242,8 @@ const AppShowcase = () => {
 })}
 
         </Slider>
-        <div className="mt-10 text-center max-w-2xl mx-auto">
-  <p className="text-gray-400 text-sm leading-relaxed transition-opacity duration-500">
+        <div className="mt-14 text-center max-w-3xl mx-auto">
+  <p className="text-gray-300 text-sm leading-tight transition-opacity duration-500">
     {projects[activeSlide].detailed}
   </p>
 </div>
