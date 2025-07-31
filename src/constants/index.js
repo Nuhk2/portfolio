@@ -261,6 +261,7 @@ const socialImgs = [
   {
     name: "linkedin",
     imgPath: "/images/linkedin.png",
+    link: "https://www.linkedin.com/in/najam-ul-hassan-551ba8212/",
   },
 ];
 
