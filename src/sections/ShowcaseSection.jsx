@@ -25,7 +25,7 @@ const projects = [
   {
     title: "Guitar - Circle of Fifths",
     img: "/images/project2.png",
-    bg: "bg-[#FFEFDB]",
+    bg: "",
     short:
       "An interactive app to explore music theory and practice chord progressions.",
     detailed:
@@ -36,7 +36,7 @@ const projects = [
   {
     title: "Quetta Tea Cafe",
     img: "/images/project3.png",
-    bg: "bg-[#FFE7EB]",
+    bg: "",
     short:
       "A cozy café brand website showcasing menu, gallery, and reservations.",
     detailed:
