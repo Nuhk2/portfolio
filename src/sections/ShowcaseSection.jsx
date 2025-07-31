@@ -41,19 +41,19 @@ const projects = [
       "A cozy café brand website showcasing menu, gallery, and reservations.",
     detailed:
       "Quetta Tea Cafe's website highlights a warm ambiance, online ordering, and reservations with a smooth browsing experience.",
-    git: "https://github.com/yourusername/quetta-tea-cafe", // replace with real link
-    live: "https://quettateacafe.com", // replace with real link
+    // git: "https://github.com/yourusername/quetta-tea-cafe", // replace with real link
+    // live: "https://quettateacafe.com", // replace with real link
   },
   {
-    title: "Random Project Showcase",
+    title: "Coming Soon!",
     img: "/images/project1.png",
     bg: "",
     short:
       "An experimental project demonstrating creativity and problem-solving.",
     detailed:
       "This random showcase project was built to explore innovative ideas and experiment with UI/UX and development patterns.",
-    git: "https://github.com/yourusername/random-project", // replace with real link
-    live: "https://randomproject.com", // replace with real link
+    // git: "https://github.com/yourusername/random-project", // replace with real link
+    // live: "https://randomproject.com", // replace with real link
   },
 ];
 
