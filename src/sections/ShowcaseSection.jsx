@@ -46,7 +46,7 @@ const projects = [
   },
   {
     title: "Coming Soon!",
-    img: "/images/project1.png",
+    img: "/images/project4.png",
     bg: "",
     short:
       "An experimental project demonstrating creativity and problem-solving.",
