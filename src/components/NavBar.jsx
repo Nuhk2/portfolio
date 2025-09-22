@@ -42,11 +42,19 @@ const NavBar = () => {
           </ul>
         </nav>
 
+<ul className="flex items-center space-x-4">
+        <a href="#resume" className="contact-btn group" >
+          <div className="inner">
+            <span>My Resume</span>
+          </div>
+        </a>
+
         <a href="#contact" className="contact-btn group">
           <div className="inner">
             <span>Contact me</span>
           </div>
         </a>
+        </ul>
       </div>
     </header>
   );
