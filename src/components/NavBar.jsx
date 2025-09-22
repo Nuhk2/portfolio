@@ -43,7 +43,7 @@ const NavBar = () => {
         </nav>
 
 <ul className="flex items-center space-x-4">
-        <a href="#resume" className="contact-btn group" >
+        <a href="public\Resume_Najam.pdf" target="_blank" className="contact-btn group" download="Resume_Najam.pdf">
           <div className="inner">
             <span>My Resume</span>
           </div>
