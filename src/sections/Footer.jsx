@@ -7,8 +7,16 @@ const Footer = () => {
         <div className="flex flex-col justify-center">
           
           <p>
-            <i className="fa-solid fa-location-dot text-red-400">  </i> 
-          Rawalpindi, Pakistan</p>
+  <i className="fa-solid fa-location-dot text-red-400"></i>{' '}
+  <a 
+    href="https://www.google.com/maps/place/Rawalpindi,+Pakistan" 
+    target="_blank" 
+    rel="noopener noreferrer"
+    className="text-white no-underline hover:no-underline hover:text-red-200"
+  >
+    Rawalpindi, Pakistan
+  </a>
+</p>
         </div>
         <div className="socials">
           {socialImgs.map((socialImg, index,) => (

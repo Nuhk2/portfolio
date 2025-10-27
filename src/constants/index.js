@@ -144,6 +144,21 @@ const techStackIcons = [
 ];
 
 const expCards = [
+
+   {
+   review: "Najam’s work on AI Chatbot Integration at Fauji Fertilizer demonstrated strong innovation and technical depth. He developed intelligent solutions that improved internal knowledge access and aligned with the company’s digital transformation goals.",
+   imgPath: "/images/ffc.webp",
+logoPath: "/images/logos/FFC-logo.png",
+company: "Fauji Fertilizer Company Limited",
+title: "AI Engineer - Intern",
+date: "August 2025 - September 2025",
+responsibilities: [
+  "Worked on developing an AI-powered chatbot using Retrieval-Augmented Generation (RAG) and Large Language Models (LLMs).",
+  "Proposed the integration of the chatbot into the company ecosystem using Microsoft Azure OpenAI services.",
+  "Proposed Enhancing Copilot capabilities by enabling RAG-based responses tailored to company-specific data.",
+  "Contributed to secure and efficient data handling to ensure accurate, context-aware company information delivery."
+],
+  },
   {
     review: "Najam brought creativity and technical expertise to the team, significantly improving our backend performance. His work has been invaluable in delivering faster experiences.",
     imgPath: "/images/exp1.png",
@@ -175,7 +190,7 @@ const expCards = [
     imgPath: "/images/exp3.png",
     logoPath: "/images/logo3.png",
     company: "Fauji Foundation",
-    title: "Internee - Software Engineer",
+    title: "Software Engineer - Intern",
     date: "July 2023 - August 2023",
     responsibilities: [
       "Gained hands-on experience in modern web development using React JS and Tailwind CSS.",
@@ -185,20 +200,7 @@ const expCards = [
     ],
   },
 
-  {
-    review: "Najam's work on Report Integration brought a high level of quality and efficiency. He delivered solutions that enhanced our data reporting & meet our product goals.",
-    imgPath: "/images/exp3.png",
-    logoPath: "/images/logo3.png",
-    company: "Fauji Foundation",
-    title: "Internee - Software Engineer",
-    date: "July 2023 - August 2023",
-    responsibilities: [
-      "Gained hands-on experience in modern web development using React JS and Tailwind CSS.",
-      "Built responsive, user-friendly interfaces, focusing on cross-browser compatibility and usability.",
-      "Developed data reporting skills using Jasper Studio to support organizational reporting needs.",
-
-    ],
-  },
+ 
 ];
 
 const expLogos = [
