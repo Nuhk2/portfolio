@@ -31,7 +31,7 @@ const projects = [
     detailed:
       "Circle of Fifths Guitar helps musicians visualize scales and chords. Built with React and modern UI for smooth practice sessions.",
     git: "https://github.com/Nuhk2/Guitar.circle-of-fifths", // replace with real link
-    live: "https://guitar-circle-of-fifths.vercel.app/", // replace with real link
+    live: "https://FretFifths.vercel.app/", // replace with real link
   },
   {
     title: "Quetta Tea Cafe",
