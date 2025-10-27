@@ -29,10 +29,10 @@ const words = [
 ];
 
 const counterItems = [
-  { value: 1, suffix: "+", label: "Years of Experience" },
-{ value: 3, suffix: "", label: "Internships Completed" },
+  { value: 2, suffix: "+", label: "Years of Experience" },
+{ value: 4, suffix: "", label: "Internships Completed" },
 { value: 10, suffix: "+", label: "Projects Built" },
-{ value: 7, suffix: "+", label: "Technologies Mastered" },
+{ value: 10, suffix: "+", label: "Technologies Mastered" },
 
 ];
 
@@ -170,6 +170,21 @@ const expCards = [
       "Implemented Tailwind CSS to streamline styling workflows and ensure efficient, responsive designs.",
     ],
   },
+  {
+    review: "Najam's work on Report Integration brought a high level of quality and efficiency. He delivered solutions that enhanced our data reporting & meet our product goals.",
+    imgPath: "/images/exp3.png",
+    logoPath: "/images/logo3.png",
+    company: "Fauji Foundation",
+    title: "Internee - Software Engineer",
+    date: "July 2023 - August 2023",
+    responsibilities: [
+      "Gained hands-on experience in modern web development using React JS and Tailwind CSS.",
+      "Built responsive, user-friendly interfaces, focusing on cross-browser compatibility and usability.",
+      "Developed data reporting skills using Jasper Studio to support organizational reporting needs.",
+
+    ],
+  },
+
   {
     review: "Najam's work on Report Integration brought a high level of quality and efficiency. He delivered solutions that enhanced our data reporting & meet our product goals.",
     imgPath: "/images/exp3.png",
