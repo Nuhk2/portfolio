@@ -41,7 +41,7 @@ const projects = [
       "A cozy café brand website showcasing menu, gallery, and reservations.",
     detailed:
       "Quetta Tea Cafe's website highlights a warm ambiance, online ordering, and reservations with a smooth browsing experience.",
-    uiDesign: "https://www.figma.com/design/BGzUJ7il0Ly1eagJwQTEUw/Untitled?node-id=1-2160&t=iAYlvIDa6cQxSKDB-1", // replace with real link
+    uiDesign: "https://www.figma.com/design/BGzUJ7il0Ly1eagJwQTEUw/Untitled?node-id=1-2160&t=iAYlvIDa6cQxSKDB-1https://www.behance.net/gallery/237435805/Quetta-Caf-Website-Design-Brand-Experience", // replace with real link
     // live: "https://quettateacafe.com", // replace with real link
   },
   {
