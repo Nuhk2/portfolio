@@ -41,7 +41,7 @@ const projects = [
       "A cozy café brand website showcasing menu, gallery, and reservations.",
     detailed:
       "Quetta Tea Cafe's website highlights a warm ambiance, online ordering, and reservations with a smooth browsing experience.",
-    // git: "https://github.com/yourusername/quetta-tea-cafe", // replace with real link
+    uiDesign: "https://www.figma.com/design/BGzUJ7il0Ly1eagJwQTEUw/Untitled?node-id=1-2160&t=iAYlvIDa6cQxSKDB-1", // replace with real link
     // live: "https://quettateacafe.com", // replace with real link
   },
   {
@@ -159,7 +159,7 @@ const AppShowcase = () => {
     ],
   };
 
-  const ButtonGroup = ({ gitLink, liveLink }) => {
+  const ButtonGroup = ({ gitLink, liveLink, uiDesign }) => {
   const buttons = [];
 
   if (gitLink && gitLink.trim() !== "") {
@@ -192,6 +192,23 @@ const AppShowcase = () => {
              hover:bg-white "
       >
         View Live
+      </a>
+    );
+  }
+
+  if (uiDesign && uiDesign.trim() !== "") {
+    buttons.push(
+      <a
+        key="uiDesign"
+        href={uiDesign}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="px-5 py-2 rounded-xl bg-gray-800 text-gray-200 font-small 
+              transition-all duration-500 
+             hover:text-black  
+             hover:bg-white "
+      >
+        UI Design
       </a>
     );
   }
@@ -235,7 +252,7 @@ const AppShowcase = () => {
         <h2 className="text-2xl font-semibold text-white">{proj.title}</h2>
         <p className="text-gray-300 md:text-lg mt-2">{proj.short}</p>
         
-        <ButtonGroup gitLink={proj.git} liveLink={proj.live} />
+        <ButtonGroup gitLink={proj.git} liveLink={proj.live} uiDesign={proj.uiDesign} />
       </div>
     </div>
   );
