@@ -45,15 +45,15 @@ const projects = [
     // live: "https://quettateacafe.com", // replace with real link
   },
   {
-    title: "Coming Soon!",
+    title: "Muses of Saaram",
     img: "/images/project4.png",
     bg: "",
     short:
-      "An experimental project demonstrating creativity and problem-solving.",
+      "A portfolio website for an artist to showcase their Photography, Visual Art, and Services.",
     detailed:
-      "This random showcase project was built to explore innovative ideas and experiment with UI/UX and development patterns.",
-    // git: "https://github.com/yourusername/random-project", // replace with real link
-    // live: "https://randomproject.com", // replace with real link
+      "Muses of Saaram is a curated online portfolio designed to elegantly present an artist's body of work. The site features dedicated sections for their Photography and Visual Art, allowing for an immersive viewing experience. It also includes a clear Services section for potential clients and an easy-to-use contact method, all built with intuitive navigation to ensure visitors can effortlessly explore the artist's creative world.",
+    git: "https://github.com/Nuhk2/musesofSaaram-portfolioWebsite",
+     live: "https://musesofsaaram.vercel.app", 
   },
 ];
 
