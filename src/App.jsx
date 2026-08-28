@@ -10,18 +10,22 @@ import FeatureCards from "./sections/FeatureCards";
 import Navbar from "./components/NavBar";
 
 const App = () => (
-  <>
+  <div className="min-h-screen relative overflow-x-hidden font-sans transition-colors duration-300">
     <Navbar />
-    <Hero />
-    <ShowcaseSection />
-    <LogoShowcase />
-    <FeatureCards />
-    <Experience />
-    <TechStack />
-    <Testimonials />
-    <Contact />
+    <main>
+      <Hero />
+      <ShowcaseSection />
+      <LogoShowcase />
+      <FeatureCards />
+      <Experience />
+      <TechStack />
+      <Testimonials />
+      <Contact />
+    </main>
     <Footer />
-  </>
+  </div>
 );
 
 export default App;
+
+

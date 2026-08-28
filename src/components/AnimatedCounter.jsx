@@ -13,6 +13,7 @@ const AnimatedCounter = () => {
 
   useGSAP(() => {
     countersRef.current.forEach((counter, index) => {
+      if (!counter) return;
       const numberElement = counter.querySelector(".counter-number");
       const item = counterItems[index];
 
@@ -24,32 +25,33 @@ const AnimatedCounter = () => {
         innerText: item.value,
         duration: 2.5,
         ease: "power2.out",
-        snap: { innerText: 1 }, // Ensures whole numbers
+        snap: { innerText: 1 },
         scrollTrigger: {
           trigger: "#counter",
-          start: "top center",
+          start: "top 80%",
         },
-        // Add the suffix after counting is complete
         onComplete: () => {
-          numberElement.textContent = `${item.value}${item.suffix}`;
+          if (numberElement) {
+            numberElement.textContent = `${item.value}${item.suffix}`;
+          }
         },
       });
     }, counterRef);
   }, []);
 
   return (
-    <div id="counter" ref={counterRef} className="padding-x-lg xl:mt-0 mt-32">
-      <div className="mx-auto grid-4-cols">
+    <div id="counter" ref={counterRef} className="w-full">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
         {counterItems.map((item, index) => (
           <div
             key={index}
-            ref={(el) => el && (countersRef.current[index] = el)}
-            className="bg-zinc-900 rounded-lg p-10 flex flex-col justify-center"
+            ref={(el) => (countersRef.current[index] = el)}
+            className="glass-card rounded-2xl p-6 flex flex-col justify-center items-center text-center border border-white/10 hover:border-indigo-500/40 transition-all duration-300 group"
           >
-            <div className="counter-number text-white-50 text-5xl font-bold mb-2">
+            <div className="counter-number text-3xl sm:text-5xl font-bold font-mono text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-cyan-500 to-purple-500 mb-2 group-hover:scale-105 transition-transform duration-300">
               0 {item.suffix}
             </div>
-            <div className="text-white-50 text-lg">{item.label}</div>
+            <div className="text-xs sm:text-sm font-medium opacity-85">{item.label}</div>
           </div>
         ))}
       </div>
@@ -58,3 +60,5 @@ const AnimatedCounter = () => {
 };
 
 export default AnimatedCounter;
+
+

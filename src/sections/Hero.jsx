@@ -3,77 +3,94 @@ import gsap from "gsap";
 
 import AnimatedCounter from "../components/AnimatedCounter";
 import Button from "../components/Button";
-import { words } from "../constants";
-import HeroExperience from "../components/models/hero_models/HeroExperience";
+import HeroVisual from "../components/HeroVisual";
 
 const Hero = () => {
   useGSAP(() => {
     gsap.fromTo(
-      ".hero-text h1",
-      { y: 50, opacity: 0 },
-      { y: 0, opacity: 1, stagger: 0.2, duration: 1, ease: "power2.inOut" }
+      ".hero-anim",
+      { y: 30, opacity: 0 },
+      { y: 0, opacity: 1, stagger: 0.15, duration: 0.9, ease: "power3.out" }
     );
   });
 
   return (
-    <section id="hero" className="relative overflow-hidden">
-      <div className="absolute top-0 left-0 z-10">
-        <img src="/images/bg.png" alt="" />
-      </div>
+    <section id="hero" className="relative overflow-hidden pt-28 pb-12 md:py-36">
+      {/* Ambient Glow */}
+      <div className="bg-ambient-glow w-[500px] h-[500px] bg-indigo-600 -top-40 -left-40"></div>
+      <div className="bg-ambient-glow w-[400px] h-[400px] bg-cyan-500 top-1/2 right-0"></div>
 
-      <div className="hero-layout">
-        {/* LEFT: Hero Content */}
-        <header className="flex flex-col justify-center md:w-full w-screen md:px-20 px-5">
-          <div className="flex flex-col gap-7">
-            <div className="hero-text">
-              <h1>
-                Shaping
-                <span className="slide">
-                  <span className="wrapper">
-                    {words.map((word, index) => (
-                      <span
-                        key={index}
-                        className="flex items-center md:gap-3 gap-1 pb-2"
-                      >
-                        <img
-                          src={word.imgPath}
-                          alt="person"
-                          className="xl:size-12 md:size-10 size-7 md:p-2 p-1 rounded-full bg-white-50"
-                        />
-                        <span>{word.text}</span>
-                      </span>
-                    ))}
-                  </span>
-                </span>
-              </h1>
-              <h1>into Real Projects</h1>
-              
+      <div className="relative z-10 max-w-7xl mx-auto px-5 md:px-10">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          {/* LEFT: Hero Text Content */}
+          <div className="lg:col-span-7 flex flex-col justify-center space-y-6">
+            {/* Status Badge */}
+            <div className="hero-anim flex items-center space-x-2 w-fit px-4 py-1.5 rounded-full glass-panel border border-white/10 text-xs sm:text-sm font-medium backdrop-blur-md">
+              <span className="relative flex h-2.5 w-2.5">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
+              </span>
+              <span className="font-mono">Available for Full Stack & AI Projects</span>
             </div>
 
-            <p className="text-white-50 md:text-xl relative z-10 pointer-events-none">
-              Hi, I’m Najam ul Hassan, a software engineer with a passion for
-              code.
+            {/* Headline */}
+            <div className="hero-anim space-y-2">
+              <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight">
+                Shaping <span className="gradient-text">Ideas & Code</span>
+              </h1>
+              <h2 className="text-2xl sm:text-4xl lg:text-5xl font-bold opacity-85">
+                into High-Performance Digital Products
+              </h2>
+            </div>
+
+            {/* Description */}
+            <p className="hero-anim text-base sm:text-lg max-w-2xl leading-relaxed opacity-80">
+              Hi, I’m <strong className="font-semibold opacity-100">Najam ul Hassan</strong> — a Software & AI Engineer specializing in building modern web applications, intelligent AI chatbots, and scalable backend solutions.
             </p>
 
-            <Button
-              text="See My Work"
-              className="md:w-80 md:h-16 w-60 h-12"
-              id="counter"
-            />
-          </div>
-        </header>
+            {/* CTAs */}
+            <div className="hero-anim flex flex-wrap gap-4 pt-2">
+              <Button
+                text="Explore My Work"
+                className="w-full sm:w-auto"
+                id="counter"
+              />
+              <a
+                href="#contact"
+                className="px-6 py-3.5 rounded-xl border border-white/15 bg-white/5 hover:bg-white/10 font-medium text-sm transition-all duration-300 flex items-center justify-center space-x-2"
+              >
+                <span>Let's Talk</span>
+                <svg className="w-4 h-4 text-cyan-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
+              </a>
+            </div>
 
-        {/* RIGHT: 3D Model or Visual */}
-        <figure>
-          <div className="hero-3d-layout">
-            <HeroExperience />
+            {/* Quick Tech Badges */}
+            <div className="hero-anim pt-4 flex flex-wrap items-center gap-2 text-xs font-mono opacity-80">
+              <span className="font-semibold text-slate-500 uppercase mr-1">Stack:</span>
+              <span className="px-2.5 py-1 rounded-md glass-card font-mono text-indigo-500">React</span>
+              <span className="px-2.5 py-1 rounded-md glass-card font-mono text-cyan-500">Node.js</span>
+              <span className="px-2.5 py-1 rounded-md glass-card font-mono text-purple-500">Python / AI</span>
+              <span className="px-2.5 py-1 rounded-md glass-card font-mono text-emerald-500">Tailwind</span>
+            </div>
           </div>
-        </figure>
+
+          {/* RIGHT: 2D Code Window Visual */}
+          <div className="lg:col-span-5 hero-anim">
+            <HeroVisual />
+          </div>
+        </div>
+
+        {/* Counter Items Section */}
+        <div className="mt-16 sm:mt-24 pt-8 border-t border-white/10">
+          <AnimatedCounter />
+        </div>
       </div>
-
-      <AnimatedCounter />
     </section>
   );
 };
 
 export default Hero;
+
+

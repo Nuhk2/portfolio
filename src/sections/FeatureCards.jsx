@@ -1,18 +1,22 @@
 import { abilities } from "../constants";
 
 const FeatureCards = () => (
-  <div className="w-full padding-x-lg">
-    <div className="mx-auto grid-3-cols">
-      {abilities.map(({ imgPath, title, desc }) => (
+  <div className="max-w-7xl mx-auto px-5 md:px-10 mt-16">
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+      {abilities.map(({ imgPath, title, desc }, index) => (
         <div
-          key={title}
-          className="card-border rounded-xl p-8 flex flex-col gap-4"
+          key={index}
+          className="glass-card rounded-2xl p-8 border border-white/10 flex flex-col justify-between space-y-4 hover:border-indigo-500/40 transition-all duration-300 group"
         >
-          <div className="size-14 flex items-center justify-center rounded-full">
-            <img src={imgPath} alt={title} />
+          <div className="w-14 h-14 rounded-2xl glass-panel border border-white/10 flex items-center justify-center p-3 shadow-sm group-hover:scale-110 transition-transform duration-300">
+            <img src={imgPath} alt={title} className="w-full h-full object-contain" />
           </div>
-          <h3 className="text-white text-2xl font-semibold mt-2">{title}</h3>
-          <p className="text-white-50 text-lg">{desc}</p>
+          <div className="space-y-2">
+            <h3 className="text-xl font-bold group-hover:text-cyan-500 transition-colors">
+              {title}
+            </h3>
+            <p className="text-sm leading-relaxed opacity-80">{desc}</p>
+          </div>
         </div>
       ))}
     </div>
@@ -20,3 +24,4 @@ const FeatureCards = () => (
 );
 
 export default FeatureCards;
+
