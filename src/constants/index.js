@@ -145,20 +145,20 @@ const techStackIcons = [
 
 const expCards = [
 
-   {
-   review: "Nerd Flow review Card",
-   imgPath: "",
-logoPath: "",
-company: "Nerd Flow",
-title: "Front End Dev / QA",
-date: "January 2026 - Present",
-responsibilities: [
-  "Worked on developing an AI-powered chatbot using Retrieval-Augmented Generation (RAG) and Large Language Models (LLMs).",
-  "Proposed the integration of the chatbot into the company ecosystem using Microsoft Azure OpenAI services.",
-  "Proposed Enhancing Copilot capabilities by enabling RAG-based responses tailored to company-specific data.",
-  "Contributed to secure and efficient data handling to ensure accurate, context-aware company information delivery."
-],
-  },
+//    {
+//    review: "Nerd Flow review Card",
+//    imgPath: "",
+// logoPath: "",
+// company: "Nerd Flow",
+// title: "Front End Dev / QA",
+// date: "January 2026 - Present",
+// responsibilities: [
+//   "Worked on developing an AI-powered chatbot using Retrieval-Augmented Generation (RAG) and Large Language Models (LLMs).",
+//   "Proposed the integration of the chatbot into the company ecosystem using Microsoft Azure OpenAI services.",
+//   "Proposed Enhancing Copilot capabilities by enabling RAG-based responses tailored to company-specific data.",
+//   "Contributed to secure and efficient data handling to ensure accurate, context-aware company information delivery."
+// ],
+//   },
   {
    review: "Najam’s work on AI Chatbot Integration at Fauji Fertilizer demonstrated strong innovation and technical depth. He developed intelligent solutions that improved internal knowledge access and aligned with the company’s digital transformation goals.",
    imgPath: "/images/ffc.webp",
