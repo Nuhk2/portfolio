@@ -121,15 +121,15 @@ const Experience = () => {
                         <img src={card.logoPath} alt="logo" />
                       </div>
                       <div>
-                        <h1 className="font-semibold text-3xl">{card.title}</h1>
-                        <h1 className="from-neutral-300 italic text-2xl">{card.company}</h1>
-                        <p className="my-5 text-white-50">
+                        <h1 className="font-semibold text-3xl" style={{ color: 'var(--text-primary)' }}>{card.title}</h1>
+                        <h1 className="italic text-2xl" style={{ color: 'var(--text-secondary)' }}>{card.company}</h1>
+                        <p className="my-5" style={{ color: 'var(--text-secondary)' }}>
                           🗓️&nbsp;{card.date}
                         </p>
-                        <p className="text-[#839CB5] italic">
+                        <p className="italic" style={{ color: 'var(--text-tertiary)' }}>
                           Responsibilities
                         </p>
-                        <ul className="list-disc ms-5 mt-5 flex flex-col gap-5 text-white-50">
+                        <ul className="list-disc ms-5 mt-5 flex flex-col gap-5" style={{ color: 'var(--text-secondary)' }}>
                           {card.responsibilities.map(
                             (responsibility, index) => (
                               <li key={index} className="text-lg">

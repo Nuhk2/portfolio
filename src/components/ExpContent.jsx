@@ -1,10 +1,10 @@
 const ExpContent = ({ expContent }) => {
   return (
     <div className="card-border rounded-xl p-10">
-      <h1 className="font-semibold text-3xl">{expContent.title}</h1>
-      <p>{expContent.date}</p>
-      <p className="text-white-50">Responsibilities</p>
-      <ul className="list-disc ms-5 text-white-50">
+      <h1 className="font-semibold text-3xl" style={{ color: "var(--text-primary)" }}>{expContent.title}</h1>
+      <p style={{ color: "var(--text-secondary)" }}>{expContent.date}</p>
+      <p style={{ color: "var(--text-tertiary)" }}>Responsibilities</p>
+      <ul className="list-disc ms-5" style={{ color: "var(--text-secondary)" }}>
         {expContent.responsibilities.map((responsibility, index) => (
           <li key={index}>{responsibility}</li>
         ))}

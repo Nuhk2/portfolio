@@ -8,11 +8,11 @@ const FeatureCards = () => (
           key={title}
           className="card-border rounded-xl p-8 flex flex-col gap-4"
         >
-          <div className="size-14 flex items-center justify-center rounded-full">
+          <div className="size-14 flex items-center justify-center rounded-full" style={{ backgroundColor: 'var(--bg-tertiary)' }}>
             <img src={imgPath} alt={title} />
           </div>
-          <h3 className="text-white text-2xl font-semibold mt-2">{title}</h3>
-          <p className="text-white-50 text-lg">{desc}</p>
+          <h3 className="text-2xl font-semibold mt-2" style={{ color: 'var(--text-primary)' }}>{title}</h3>
+          <p className="text-lg" style={{ color: 'var(--text-secondary)' }}>{desc}</p>
         </div>
       ))}
     </div>

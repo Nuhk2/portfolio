@@ -6,13 +6,14 @@ const Footer = () => {
       <div className="footer-container">
         <div className="flex flex-col justify-center">
           
-          <p>
+          <p style={{ color: 'var(--text-secondary)' }}>
   <i className="fa-solid fa-location-dot text-red-400"></i>{' '}
   <a 
     href="https://www.google.com/maps/place/Rawalpindi,+Pakistan" 
     target="_blank" 
     rel="noopener noreferrer"
-    className="text-white no-underline hover:no-underline hover:text-red-200"
+    className="no-underline hover:no-underline hover:text-red-200"
+    style={{ color: 'var(--text-primary)' }}
   >
     Rawalpindi, Pakistan
   </a>
@@ -26,7 +27,7 @@ const Footer = () => {
           ))}
         </div>
         <div className="flex flex-col justify-center">
-          <p className="text-center md:text-end">
+          <p className="text-center md:text-end" style={{ color: 'var(--text-secondary)' }}>
             © {new Date().getFullYear()} nuhk . All rights reserved.
           </p>
         </div>

@@ -18,7 +18,7 @@ const Hero = () => {
   return (
     <section id="hero" className="relative overflow-hidden">
       <div className="absolute top-0 left-0 z-10">
-        <img src="/images/bg.png" alt="" />
+        <img src="/images/bg.png" alt="" className="hero-bg-overlay" />
       </div>
 
       <div className="hero-layout">
@@ -38,7 +38,8 @@ const Hero = () => {
                         <img
                           src={word.imgPath}
                           alt="person"
-                          className="xl:size-12 md:size-10 size-7 md:p-2 p-1 rounded-full bg-white-50"
+                          className="xl:size-12 md:size-10 size-7 md:p-2 p-1 rounded-full"
+                          style={{ backgroundColor: 'var(--bg-tertiary)' }}
                         />
                         <span>{word.text}</span>
                       </span>
@@ -50,7 +51,7 @@ const Hero = () => {
               
             </div>
 
-            <p className="text-white-50 md:text-xl relative z-10 pointer-events-none">
+            <p className="md:text-xl relative z-10 pointer-events-none" style={{ color: 'var(--text-secondary)' }}>
               Hi, I’m Najam ul Hassan, a software engineer with a passion for
               code.
             </p>

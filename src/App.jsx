@@ -8,20 +8,23 @@ import ShowcaseSection from "./sections/ShowcaseSection";
 import LogoShowcase from "./sections/LogoShowcase";
 import FeatureCards from "./sections/FeatureCards";
 import Navbar from "./components/NavBar";
+import { ThemeProvider } from "./context/ThemeContext";
 
 const App = () => (
-  <>
-    <Navbar />
-    <Hero />
-    <ShowcaseSection />
-    <LogoShowcase />
-    <FeatureCards />
-    <Experience />
-    <TechStack />
-    <Testimonials />
-    <Contact />
-    <Footer />
-  </>
+  <ThemeProvider>
+    <>
+      <Navbar />
+      <Hero />
+      <ShowcaseSection />
+      <LogoShowcase />
+      <FeatureCards />
+      <Experience />
+      <TechStack />
+      <Testimonials />
+      <Contact />
+      <Footer />
+    </>
+  </ThemeProvider>
 );
 
 export default App;
